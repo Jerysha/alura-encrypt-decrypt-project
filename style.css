@@ -1,0 +1,304 @@
+:root {
+  /* Dark blue */
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+
+  /* Gray */
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+  --gray: #D8DFE8;
+
+  /* Light blue */
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+  /*Transition*/
+  --transition-buttons: all 0.2s ease-in-out;
+  /*Border-radius*/
+  --border-radius-btns: 20px;
+  --border-radius-options: 40px;
+  /*Font Size*/
+  --text-size-xs: 12px;
+  --text-size-sm: 16px;
+  --text-size-md: 20px;
+  --text-size-ld: 22px;
+  /*Margin*/
+  --margin-xs: 10px;
+  --margin-sm: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  background-color: var(--light-blue-100);
+}
+/*------------------Header-----------------------*/
+header,
+main {
+  padding: 0 10px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+.header-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.font-icon {
+  display: flex;
+}
+.header-menu-1,
+.header-menu-2-btns {
+  width: 130px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius-options);
+}
+.header-menu-icon-text svg {
+  fill: var(--dark-blue-300);
+  stroke: var(--dark-blue-300);
+}
+svg,
+.header-menu-2-btns button {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: var(--border-radius-options);
+  transition: var(--transition-buttons);
+}
+.header-menu-2-btns button {
+  border: none;
+  font-weight: bold;
+  color: var(--dark-blue-300);
+  background-color: var(--gray-100);
+}
+svg:hover {
+  background-color: var(--dark-blue-300);
+  stroke: var(--gray-100);
+}
+.header-menu-2-btns button:hover {
+  background-color: var(--dark-blue-300);
+  color: var(--gray-100);
+}
+/*---------------------Main---------------------------*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-container-text textarea {
+  font-size: 32px;
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  color: var(--dark-blue-300);
+  outline: none;
+  word-break: break-all;
+}
+textarea::placeholder {
+  color: var(--dark-blue-300);
+}
+.main-container-warning {
+  display: flex;
+  gap: 10px;
+  color: var(--gray-400);
+  margin: var(--margin-xs);
+}
+#input-text,
+#message {
+  width: 100%;
+}
+.main-container-info {
+  margin-bottom: var(--margin-sm);
+}
+/*Main second container*/
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: var(--margin-xs);
+}
+.btns-container button {
+  padding: 20px 10px;
+  border-radius: var(--border-radius-btns);
+  border: 1px solid var(--dark-blue-500);
+  background-color: var(--gray);
+  color: var(--dark-blue-300);
+  transition: var(--transition-buttons);
+}
+.btns-container button:hover {
+  background-color: var(--dark-blue-300);
+  color: white;
+}
+/*Main thirt container*/
+.result-container {
+  margin-top: var(--margin-xs);
+  background-color: white;
+  border-radius: var(--border-radius-options);
+  padding: 20px;
+}
+.result-text {
+  margin-bottom: var(--margin-sm);
+}
+.result-copy button {
+  width: 100%;
+  border-radius: var(--border-radius-btns);
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid var(--dark-blue-300);
+  transition: var(--transition-buttons);
+}
+#copy-text:hover {
+  background-color: var(--dark-blue-300);
+  color: white;
+}
+#message {
+  display: none;
+  outline: none;
+  border: none;
+}
+.message-empty {
+  text-align: center;
+}
+.message-empty h2{
+    color: var(--gray-500);
+}
+.message-empty p {
+  margin: 0 auto;
+  font-size: var(--text-size-xs);
+  color: var(--gray-400);
+}
+.message-img {
+  display: none;
+}
+@media (max-width: 320px){
+    .main-container-text textarea{
+        font-size: 28px;
+    }
+    .main-container-warning{
+        gap: 1;
+    }
+    .main-container-warning p{
+        font-size: 14px;
+    }
+    .message-empty h2{
+        font-size: 18px;
+    }
+    .message-empty p{
+        font-size: 10px;
+    }
+}
+/*----------------------Tablet---------------------------*/
+@media (min-width: 768px) and (max-width: 1440px) {
+  /*----------------------Header-------------------------------------*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .header-bottom {
+    padding-right: 40px;
+    gap: 30px;
+  }
+  .header-menu-1,
+  .header-menu-2-btns {
+    background-color: var(--light-blue-300);
+  }
+  .font-icon {
+    padding: 10px;
+    border-radius: var(--border-radius-options);
+    background-color: white;
+  }
+  .header-menu-2-btns button {
+    background-color: white;
+  }
+  .options {
+    display: none;
+  }
+  /*---------------------Main--------------------------------*/
+  /*Second container*/
+  .btns-container {
+    flex-direction: row;
+  }
+  .btns-container button {
+    width: 100%;
+  }
+}
+/*----------------------Desktop-----------------------------------*/
+@media (min-width: 1440px) {
+  /*---------------------Header------------------------------------*/
+  .header-bottom,
+  .options {
+    display: none;
+  }
+  /*---------------------Main-------------------------------------*/
+  .main-container-info {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  /*--------------Main second container--------------------*/
+  .main-container-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .btns-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .btns-container button{
+    width: 100%;
+  }
+  /*--------------Main third container------------------------------*/
+  .result-container{
+    width: 400px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .result{
+    padding-top: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .result-text{
+    display: flex;
+    justify-content: center;
+  }
+  .message-empty{
+    margin-bottom: 70%;
+  }
+  .message-img {
+    padding: 10px;
+    display: block;
+  }
+  .result-copy button{
+    padding: 20px;
+  }
+}

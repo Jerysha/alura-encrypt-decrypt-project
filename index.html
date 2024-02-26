@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <div class="options">
+          <img src="img/hamburger.png" alt="menu" />
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-menu-1">
+          <div class="font-icon">
+            <div class="header-menu-icon-text">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.25 20.25V11.25H13.5V9.75H22.5V11.25H18.75V20.25H17.25Z"
+                  fill="white"
+                />
+                <path
+                  d="M8.25 20.25V6H1.5V4.5H16.5V6H9.75V20.25H8.25Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="header-menu-icon-face">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 1C8.40004 1 4.60004 4.4 4.10004 8.9L2.50004 11C2.00004 11.8 1.90004 12.8 2.30004 13.6C2.70004 14.3 3.30004 14.8 4.00004 14.9V16C4.00004 17.8 5.30004 19.4 7.00004 19.9V23H18V17.5C20.5 15.8 22 13.1 22 10C22 5 18 1 13 1ZM16 16.3V21H9.00004V18H8.00004C6.90004 18 6.00004 17.1 6.00004 16V13H4.50004C4.10004 13 3.80004 12.5 4.10004 12.2L6.00004 9.7C6.20004 6 9.20004 3 13 3C16.9 3 20 6.1 20 10C20 12.8 18.4 15.2 16 16.3Z"
+                  fill="#0A3871"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="header-menu-2">
+          <div class="header-menu-2-btns">
+            <div class="font-icon">
+              <button>PT</button>
+              <button>ES</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-container">
+        <div class="main-container-info">
+          <div class="main-container-text">
+            <textarea
+              name="words"
+              id="input-text"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese el texto aquí"
+            ></textarea>
+            <div class="main-actions">
+                <div class="main-container-warning">
+                    <img src="img/info-icon.png" alt="information icon" />
+                    <p>Solo letras minúsculas y sin acentos</p>
+                  </div>
+                  <div class="btns-container">
+                    <button id="encrypt">Encriptar</button>
+                    <button id="desencrypt">Desencriptar</button>
+                  </div>
+            </div>          
+          </div>
+          <div class="result-container">
+            <div class="result">
+              <div class="result-text">
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  readonly
+                ></textarea>               
+              </div>
+              <div class="result-copy">
+                <button id="copy-text">Copiar</button>
+              </div>
+            </div>
+            <div class="message-empty">
+                <div class="message-img">
+                  <img src="img/Muñeco.png" alt="message image" />
+                </div>
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
